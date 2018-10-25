@@ -1,0 +1,29 @@
+{
+  "name": "dlundgren/sloxy",
+  "description": "Proxy system on top of SlimPHP",
+  "license": "MIT",
+  "keywords": [
+    "skeleton",
+    "proxy"
+  ],
+  "config": {
+    "sort-packages": true
+  },
+  "require": {
+    "guzzlehttp/guzzle": "^6.3",
+    "slim/slim": "^3.11"
+  },
+  "require-dev": {
+    "syberisle/coding-standards": "^2.0"
+  },
+  "scripts" : {
+    "sniff": [
+      "phpcs --config-set installed_paths vendor/syberisle/coding-standards",
+      "phpcs --standard=SyberIsle web/"
+    ],
+    "format" : [
+      "phpcs --config-set installed_paths vendor/syberisle/coding-standards",
+      "phpcbf --standard=SyberIsle web/"
+    ]
+  }
+}
